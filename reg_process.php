@@ -42,11 +42,15 @@
                     </li>
 
                     <li class="nav-item" id="menu2">
-                        <a class="nav-link active" href="moderna.html">Moderna</a>
+                        <a class="nav-link" href="moderna.html">Moderna</a>
                     </li>
 
                     <li class="nav-item" id="menu3">
                         <a class="nav-link" href="Johnson&Johnson.html">Johnson&amp;Johnson </a>
+                    </li>
+					
+					<li class="nav-item" id="menu4">
+                        <a class="nav-link active" href="check_registration.html">Check Registration</a>
                     </li>
                 </ul>
             </nav>
