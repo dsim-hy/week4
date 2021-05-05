@@ -3,13 +3,13 @@
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<meta charset="utf-8">
+    <meta charset="utf-8">
 
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="home_files/bootstrap.css">
     <link rel="stylesheet" href="home_files/app.css">
 
-	<title>Registration for COVID-19 Vaccination | COVID-19 Info Center</title>
+    <title>Registration for COVID-19 Vaccination | COVID-19 Info Center</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 </head>
@@ -48,8 +48,8 @@
                     <li class="nav-item" id="menu3">
                         <a class="nav-link" href="Johnson&Johnson.html">Johnson&amp;Johnson </a>
                     </li>
-					
-					<li class="nav-item" id="menu4">
+                                                 		
+                    <li class="nav-item" id="menu4">
                         <a class="nav-link active" href="check_registration.html">Check Registration</a>
                     </li>
                 </ul>
@@ -92,25 +92,22 @@
                                             </div>
                                             <div class="col">
                                                 <h3 class="card-title h3 mb-3 text-left"></h3>
-													<?php
-														// echo $_POST['input_name'];
-														// echo '<br>';
-														// echo $_POST['input_nric'];
-														
-														if (file_exists($_POST['input_nric'] . '.txt')){     //Check for filename with given nric
-															echo '<h3>You are already registered!</h3>';
-														}
-														else{   //filename not found, write to file
-															
-														   $content_to_write = "Name: " . $_POST['input_name'] . "\n";
-														   $content_to_write .= "NRIC: " . $_POST['input_nric'] . "\n";
-														   file_put_contents($_POST['input_nric'] . '.txt', $content_to_write);
-														   echo '<h3>Registration is successful!</h3>';
-														}
+                                                    <?php
+                                                        // echo $_POST['input_name'];
+                                                        // echo '<br>';
+                                                        // echo $_POST['input_nric'];
 
+                                                    if (file_exists($_POST['input_nric'] . '.txt')){ //Check for filename with given nric
+													    echo '<h3>You are already registered!</h3>';
+                                                    }else {   //filename not found, write to file
+                                                        $content_to_write = "Name: " . $_POST['input_name'] . "\n";
+                                                        $content_to_write .= "NRIC: " . $_POST['input_nric'] . "\n";
+                                                        file_put_contents($_POST['input_nric'] . '.txt', $content_to_write);
+                                                        echo '<h3>Registration is successful!</h3>';
+                                                    }
 													?>			
-                                            </div>
-                                        </div>
+                                             </div>
+                                          </div>
                                     </div>
                                 </div>
                             </div>
