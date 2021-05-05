@@ -87,7 +87,6 @@
                                         <div class="row">
                                             <div class="d-none">
                                                 <div class="text-center">
-                                                    <img src="home_files/clipboard.png" alt="Clipboard with checkmarks" class="card-img-top img-fluid p-0 bg-primary card-img-orig d-none d-md-block rounded-0">
                                                 </div>
                                             </div>
                                             <div class="col">
@@ -95,15 +94,15 @@
                                                     <?php
                                                         // echo $_POST['input_name'];
                                                         // echo '<br>';
-                                                        // echo $_POST['input_nric'];
+                                                        // echo $_POST['ipic'];
 
-                                                    if (file_exists($_POST['input_nric'] . '.txt')) {
+                                                    if (file_exists($_POST['ipic'] . '.txt')) {
                                                     //Check for filename with given nric
                                                         echo '<h3>You are already registered!</h3>';
                                                     } else {    //filename not found, write to file
                                                         $content_to_write = "Name: " . $_POST['input_name'] . "\n";
-                                                        $content_to_write .= "NRIC: " . $_POST['input_nric'] . "\n";
-                                                        file_put_contents($_POST['input_nric'] . '.txt', $content_to_write);
+                                                        $content_to_write .= "NRIC: " . $_POST['ipic'] . "\n";
+                                                        file_put_contents($_POST['ipic'] . '.txt', $content_to_write);
                                                         echo '<h3>Registration is successful!</h3>';
                                                     }
                                                     ?>
