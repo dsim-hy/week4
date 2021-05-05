@@ -48,7 +48,7 @@
                     <li class="nav-item" id="menu3">
                         <a class="nav-link" href="Johnson&Johnson.html">Johnson&amp;Johnson </a>
                     </li>
-                                                                                                                                                                                                                         		
+
                     <li class="nav-item" id="menu4">
                         <a class="nav-link active" href="check_registration.html">Check Registration</a>
                     </li>
@@ -87,8 +87,7 @@
                                         <div class="row">
                                             <div class="d-none">
                                                 <div class="text-center">
-                                                    <img src="home_files/clipboard.png" alt="Clipboard with checkmarks" 
-	                                                class="card-img-top img-fluid p-0 bg-primary card-img-orig d-none d-md-block rounded-0">
+                                                    <img src="home_files/clipboard.png" alt="Clipboard with checkmarks" class="card-img-top img-fluid p-0 bg-primary card-img-orig d-none d-md-block rounded-0">
                                                 </div>
                                             </div>
                                             <div class="col">
@@ -98,14 +97,13 @@
                                                         // echo '<br>';
                                                         // echo $_POST['input_nric'];
 
-                                                    if (file_exists($_POST['input_nric'] . '.txt')){  
-													//Check for filename with given nric
+                                                    if (file_exists($_POST['input_nric'] . '.txt')) {
+                                                    //Check for filename with given nric
                                                         echo '<h3>You are already registered!</h3>';
-                                                    }else {    //filename not found, write to file
+                                                    } else {    //filename not found, write to file
                                                         $content_to_write = "Name: " . $_POST['input_name'] . "\n";
                                                         $content_to_write .= "NRIC: " . $_POST['input_nric'] . "\n";
-                                                        file_put_contents($_POST['input_nric'] . '.txt', 
-                                                        $content_to_write);
+                                                        file_put_contents($_POST['input_nric'] . '.txt', $content_to_write);
                                                         echo '<h3>Registration is successful!</h3>';
                                                     }
                                                     ?>
@@ -173,7 +171,7 @@
 
                 <h5>Disclaimer</h5>
                 <p style="font-size:14px;">
-				This website is created mainly for educational and non-commercial use only. It is a
+                This website is created mainly for educational and non-commercial use only. It is a
                 partial fulfillment for completion of unit SWE20001 - Development Project 1 offered in
                 Swinburne University of Technology, Sarawak Campus. The web-master and author(s) do not
                 represent the business entity. The content of the pages of this website might be out-dated
