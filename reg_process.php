@@ -33,8 +33,8 @@
 
                 <ul class="nav navbar-nav nav-justified w-100">
 
-                    <li class="nav-item" id="menu_home">
-                        <a class="nav-link" href="home.html">Home</a>
+                    <li class="nav-item" id="menu-home">
+                        <a class="navlink" href="home.html">Home</a>
                     </li>
 
                     <li class="nav-item" id="menu1">
@@ -43,15 +43,15 @@
 
                     <li class="nav-item" id="menu2">
                         <a class="nav-link" href="moderna.html">Moderna</a>
-                    </li>
+					</li>
 
                     <li class="nav-item" id="menu3">
                         <a class="nav-link" href="Johnson&Johnson.html">Johnson&amp;Johnson </a>
                     </li>
 
-                    <li class="nav-item" id="menu4">
+					<li class="nav-item" id="menu4">
                         <a class="nav-link active" href="check_registration.html">Check Registration</a>
-                    </li>
+					</li>
                 </ul>
             </nav>
         </div>
@@ -92,16 +92,12 @@
                                             <div class="col">
                                                 <h3 class="card-title h3 mb-3 text-left"></h3>
                                                     <?php
-                                                        // echo $_POST['input_name'];
-                                                        // echo '<br>';
-                                                        // echo $_POST['ipic'];
 
                                                     if (file_exists($_POST['ipic'] . '.txt')) {
-                                                    //Check for filename with given nric
-                                                        echo '<h3>You are already registered!</h3>';
-                                                    } else {    //filename not found, write to file
+														echo '<h3>You are already registered!</h3>';
+													}else {    
                                                         $content_to_write = "Name: " . $_POST['input_name'] . "\n";
-                                                        $content_to_write .= "NRIC: " . $_POST['ipic'] . "\n";
+                                                        $content_to_write = "NRIC: " . $_POST['ipic'] . "\n";
                                                         file_put_contents($_POST['ipic'] . '.txt', $content_to_write);
                                                         echo '<h3>Registration is successful!</h3>';
                                                     }
